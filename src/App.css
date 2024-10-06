@@ -1,0 +1,72 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.image-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ... (previous styles) */
+
+.animated-image {
+  animation: 2s ease-in-out 0s infinite alternate none running crazyAnimation;
+}
+
+@keyframes crazyAnimation {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(10deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(-10deg) scale(0.8);
+  }
+  75% {
+    transform: rotate(5deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* Other animation options */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spinAndTilt {
+  0% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  50% {
+    transform: rotate(360deg) skewX(20deg);
+  }
+  100% {
+    transform: rotate(720deg) skewX(0deg);
+  }
+}
